@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ly901107.github.io</id>
+    <id>https://lex-geeker.github.io</id>
     <title>Gridea</title>
-    <updated>2019-09-05T12:11:27.720Z</updated>
+    <updated>2019-10-28T03:19:29.276Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://ly901107.github.io"/>
-    <link rel="self" href="https://ly901107.github.io/atom.xml"/>
+    <link rel="alternate" href="https://lex-geeker.github.io"/>
+    <link rel="self" href="https://lex-geeker.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://ly901107.github.io/images/avatar.png</logo>
-    <icon>https://ly901107.github.io/favicon.ico</icon>
+    <logo>https://lex-geeker.github.io/images/avatar.png</logo>
+    <icon>https://lex-geeker.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
     <entry>
+        <title type="html"><![CDATA[111]]></title>
+        <id>https://lex-geeker.github.io/post/111</id>
+        <link href="https://lex-geeker.github.io/post/111">
+        </link>
+        <updated>2019-09-05T12:32:15.000Z</updated>
+        <content type="html"><![CDATA[<p>22222</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://ly901107.github.io/post/hello-gridea</id>
-        <link href="https://ly901107.github.io/post/hello-gridea">
+        <id>https://lex-geeker.github.io/post/hello gridea</id>
+        <link href="https://lex-geeker.github.io/post/hello gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
