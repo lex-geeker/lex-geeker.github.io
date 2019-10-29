@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lex-geeker.github.io</id>
     <title>空流月</title>
-    <updated>2019-10-29T06:21:17.653Z</updated>
+    <updated>2019-10-29T09:19:33.736Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lex-geeker.github.io"/>
     <link rel="self" href="https://lex-geeker.github.io/atom.xml"/>
@@ -10,13 +10,6 @@
     <logo>https://lex-geeker.github.io/images/avatar.png</logo>
     <icon>https://lex-geeker.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 空流月</rights>
-    <entry>
-        <title type="html"><![CDATA[Test]]></title>
-        <id>https://lex-geeker.github.io/post/111</id>
-        <link href="https://lex-geeker.github.io/post/111">
-        </link>
-        <updated>2019-09-05T12:32:15.000Z</updated>
-    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://lex-geeker.github.io/post/hello gridea</id>
