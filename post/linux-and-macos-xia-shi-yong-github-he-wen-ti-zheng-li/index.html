@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lex-geeker.github.io/favicon.ico?v=1572352545337">
+<link rel="shortcut icon" href="https://lex-geeker.github.io/favicon.ico?v=1572353431450">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://lex-geeker.github.io/styles/main.css">
 
@@ -45,7 +45,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lex-geeker.github.io">
-        <img src="https://lex-geeker.github.io/images/avatar.png?v=1572352545337" class="site-logo">
+        <img src="https://lex-geeker.github.io/images/avatar.png?v=1572353431450" class="site-logo">
         <h1 class="site-title">空流月</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -127,8 +127,40 @@
 </li>
 <li>
 <p>配置git文件</p>
+</li>
+</ul>
 <pre><code>git config --global user.name &quot;你的用户名&quot;
 git config --global user.email &quot;你的邮箱&quot;
+</code></pre>
+<ul>
+<li>创建ssh-key<br>
+用户主目录下， .ssh目录下，看看这个目录下有没有id_rsa和id_rsa.pub这两个文件，如果有，可以删除重新建或者直接略过这一步。<br>
+创建ssh-key<br>
+ssh-keygen -t rsa -C &quot;邮箱地址&quot;<br>
+如果有提示一路enter下去，不用输入啥信息</li>
+<li>添加key至github, 并验证ssh-key是否设置成功<br>
+复制id_rsa.pub文件的内容，进入GitHub网站，打开Account Settings，左边选择SSH Keys，Add SSH Key，，粘贴SSH Key<br>
+你的邮箱会收到一个消息， 点进去.<br>
+执行命令<code>ssh -T git@github.com</code><br>
+如果提示<code>access dennied</code>就是没设置成功<br>
+成功提示<code>You’ve successfully authenticated, but GitHub does not provide shell access</code></li>
+<li>初始化本地仓库<br>
+<code>git init</code></li>
+</ul>
+<h3 id="常用指令">常用指令</h3>
+<h3 id="问题">问题</h3>
+<ul>
+<li>避免每次 pull/push 私有仓库输入username/password
+<ol>
+<li>对于已拉完的工程</li>
+</ol>
+<pre><code>git remote rm origin #删除原有远程关联
+git remote add origin https://username:password@github.com/your_repo_path.git  #设置新的关联依赖(注意将自己的账号密码添加到新的url中)
+</code></pre>
+<ol start="2">
+<li>新clone</li>
+</ol>
+<pre><code>git clone https://username:password@github.com/your_repo_path.git
 </code></pre>
 </li>
 </ul>
