@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>空流月</title>
+<title>在Readme.md中生成项目目录结构 | 空流月</title>
 <meta name="description" content="不积跬步无以至千里">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -13,6 +13,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://lex-geeker.github.io/styles/main.css">
 
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -108,64 +114,43 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://lex-geeker.github.io/post/zai-readmemd-zhong-sheng-cheng-xiang-mu-mu-lu-jie-gou">
-                  <h2 class="post-title">在Readme.md中生成项目目录结构</h2>
-                </a>
-                <div class="post-date">
-                  2019-10-30
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
+          <div class="post-detail">
+            <h2 class="post-title">在Readme.md中生成项目目录结构</h2>
+            <div class="post-date">2019-10-30</div>
+            
+            <div class="post-content">
+              <h3 id="使用homebrew-安装tree">使用Homebrew 安装tree</h3>
+<pre><code>brew install tree
+</code></pre>
+<h3 id="使用tree在控制台生成当前目录树">使用tree在控制台生成当前目录树</h3>
+<pre><code>// 因为实例项目为 js 项目，所以忽略了 node_modules，可根据真实项目选择性忽略文件目录，防止文件树过长
+tree -I node_modules &gt; tree.text
+</code></pre>
+<h3 id="复制目录树文本到readmemd中">复制目录树文本到readme.md中</h3>
+<figure data-type="image" tabindex="1"><img src="https://lex-geeker.github.io/post-images/1572423763667.webp" alt=""></figure>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
                 <a href="https://lex-geeker.github.io/post/linux-and-macos-xia-shi-yong-github-he-wen-ti-zheng-li">
-                  <h2 class="post-title">Linux &amp; macOS 下使用 github 和问题整理</h2>
+                  <h3 class="post-title">
+                    Linux &amp; macOS 下使用 github 和问题整理
+                  </h3>
                 </a>
-                <div class="post-date">
-                  2019-10-29
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
               </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://lex-geeker.github.io/post/hello gridea">
-                  <h2 class="post-title">Hello Gridea</h2>
-                </a>
-                <div class="post-date">
-                  2018-12-12
-                </div>
-                <div class="post-abstract">
-                  <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+            
 
-                </div>
-              </div>
+            
               
-                <a class="right" href="https://lex-geeker.github.io/post/hello gridea">
-                  <div class="feature-container" style="background-image: url('https://lex-geeker.github.io/post-images/hello gridea.png')">
-                  </div>
-                </a>
+                <div id="gitalk-container" data-aos="fade-in"></div>
               
-            </article>
-          
 
-          <div class="pagination-container">
-  
-  
-</div>
+              
+            
+
+          </div>
 
         </div>
       </div>
@@ -187,6 +172,29 @@ var app = new Vue({
 })
 
 </script>
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '8a633a06b7013f9ff51f',
+        clientSecret: '49ce8b9b9cea782154f37414d3261624ed1038e9',
+        repo: 'lex-geeker.github.io',
+        owner: 'lex-geeker',
+        admin: ['lex-geeker'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
 
 
 
