@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lex-geeker.github.io/favicon.ico?v=1572421522323">
+<link rel="shortcut icon" href="https://lex-geeker.github.io/favicon.ico?v=1572421607428">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://lex-geeker.github.io/styles/main.css">
 
@@ -45,7 +45,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lex-geeker.github.io">
-        <img src="https://lex-geeker.github.io/images/avatar.png?v=1572421522323" class="site-logo">
+        <img src="https://lex-geeker.github.io/images/avatar.png?v=1572421607428" class="site-logo">
         <h1 class="site-title">空流月</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -153,22 +153,15 @@ git config --global user.email &quot;你的邮箱&quot;
 </ul>
 <h3 id="问题">问题</h3>
 <ul>
-<li>避免每次 pull/push 私有仓库输入username/password
-<ul>
-<li>对于已拉完的工程</li>
-</ul>
-<pre><code>git remote rm origin #删除原有远程关联
+<li>避免每次 pull/push 私有仓库输入username/password<br>
+对于已拉完的工程<pre><code>git remote rm origin #删除原有远程关联
 git remote add origin https://username:password@github.com/your_repo_path.git  #设置新的关联依赖(注意将自己的账号密码添加到新的url中)
 </code></pre>
-<ul>
-<li>新clone</li>
-</ul>
-<pre><code>git clone https://username:password@github.com/your_repo_path.git
+新clone<pre><code>git clone https://username:password@github.com/your_repo_path.git
 </code></pre>
 </li>
-<li>git忽略提交 .gitignore
-<ul>
-<li>在git项目中定义 <code>.gitignore</code>文件<br>
+<li>git忽略提交 .gitignore<br>
+在git项目中定义 <code>.gitignore</code>文件<br>
 在项目的文件夹下定义, 语法如下<pre><code>bin/: 忽略当前路径下的bin文件夹，该文件夹下的所有内容都会被忽略，不忽略 bin 文件
 /bin: 忽略根目录下的bin文件
 /*.c: 忽略 cat.c，不忽略 build/cat.c
@@ -179,7 +172,7 @@ a/**/b: 忽略a/b, a/x/b, a/x/y/b等
 *.log: 忽略所有 .log 文件
 config.php: 忽略当前路径的 config.php 文件
 </code></pre>
-</li>
+<ul>
 <li>定义git全局 <code>.gitignore</code>文件<br>
 任意位置创建 <code>gitignore</code>文件, <code>git config --global core.excludesfile ~/.gitignore</code></li>
 <li><code>.gitignore</code> 规则不生效<br>
