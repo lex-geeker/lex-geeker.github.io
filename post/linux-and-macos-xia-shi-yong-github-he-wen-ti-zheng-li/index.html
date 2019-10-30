@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lex-geeker.github.io/favicon.ico?v=1572421666108">
+<link rel="shortcut icon" href="https://lex-geeker.github.io/favicon.ico?v=1572421765421">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://lex-geeker.github.io/styles/main.css">
 
@@ -45,7 +45,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lex-geeker.github.io">
-        <img src="https://lex-geeker.github.io/images/avatar.png?v=1572421666108" class="site-logo">
+        <img src="https://lex-geeker.github.io/images/avatar.png?v=1572421765421" class="site-logo">
         <h1 class="site-title">空流月</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -154,20 +154,15 @@ git config --global user.email &quot;你的邮箱&quot;
 <h3 id="问题">问题</h3>
 <ul>
 <li>避免每次 pull/push 私有仓库输入username/password<br>
-对于已拉完的工程</li>
-</ul>
-<pre><code>git remote rm origin #删除原有远程关联
+对于已拉完的工程<pre><code>git remote rm origin #删除原有远程关联
 git remote add origin https://username:password@github.com/your_repo_path.git  #设置新的关联依赖(注意将自己的账号密码添加到新的url中)
 </code></pre>
-<p>新clone</p>
-<pre><code>git clone https://username:password@github.com/your_repo_path.git
+新clone<pre><code>git clone https://username:password@github.com/your_repo_path.git
 </code></pre>
-<ul>
+</li>
 <li>git忽略提交 .gitignore<br>
 在git项目中定义 <code>.gitignore</code>文件<br>
-在项目的文件夹下定义, 语法如下</li>
-</ul>
-<pre><code>bin/: 忽略当前路径下的bin文件夹，该文件夹下的所有内容都会被忽略，不忽略 bin 文件
+在项目的文件夹下定义, 语法如下<pre><code>bin/: 忽略当前路径下的bin文件夹，该文件夹下的所有内容都会被忽略，不忽略 bin 文件
 /bin: 忽略根目录下的bin文件
 /*.c: 忽略 cat.c，不忽略 build/cat.c
 debug/*.obj: 忽略 debug/io.obj，不忽略 debug/common/io.obj 和 tools/debug/io.obj
@@ -177,18 +172,18 @@ a/**/b: 忽略a/b, a/x/b, a/x/y/b等
 *.log: 忽略所有 .log 文件
 config.php: 忽略当前路径的 config.php 文件
 </code></pre>
-<pre><code>- 定义git全局 `.gitignore`文件
-    任意位置创建 `gitignore`文件, `git config --global core.excludesfile ~/.gitignore`
-- `.gitignore` 规则不生效
-    .gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。
-    解决方法就是先把本地缓存删除（改变成未track状态），然后再提交:
-    ```
-    git rm -rf --cached .
-    git add .
-    git commit -m 'update .gitignore'
-    ```
-</code></pre>
 <ul>
+<li>定义git全局 <code>.gitignore</code>文件<br>
+任意位置创建 <code>gitignore</code>文件, <code>git config --global core.excludesfile ~/.gitignore</code></li>
+<li><code>.gitignore</code> 规则不生效<br>
+.gitignore只能忽略那些原来没有被track的文件，如果某些文件已经被纳入了版本管理中，则修改.gitignore是无效的。<br>
+解决方法就是先把本地缓存删除（改变成未track状态），然后再提交:<pre><code>git rm -rf --cached .
+git add .
+git commit -m 'update .gitignore'
+</code></pre>
+</li>
+</ul>
+</li>
 <li>创建/拉取分支
 <ul>
 <li>查看分支<br>
