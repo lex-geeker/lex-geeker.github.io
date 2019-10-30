@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://lex-geeker.github.io/favicon.ico?v=1572407583151">
+<link rel="shortcut icon" href="https://lex-geeker.github.io/favicon.ico?v=1572420712806">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://lex-geeker.github.io/styles/main.css">
 
@@ -45,7 +45,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://lex-geeker.github.io">
-        <img src="https://lex-geeker.github.io/images/avatar.png?v=1572407583151" class="site-logo">
+        <img src="https://lex-geeker.github.io/images/avatar.png?v=1572420712806" class="site-logo">
         <h1 class="site-title">空流月</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -151,7 +151,6 @@ git config --global user.email &quot;你的邮箱&quot;
 <code>git init</code></p>
 </li>
 </ul>
-<h3 id="常用指令">常用指令</h3>
 <h3 id="问题">问题</h3>
 <ul>
 <li>避免每次 pull/push 私有仓库输入username/password
@@ -161,7 +160,7 @@ git config --global user.email &quot;你的邮箱&quot;
 <pre><code>git remote rm origin #删除原有远程关联
 git remote add origin https://username:password@github.com/your_repo_path.git  #设置新的关联依赖(注意将自己的账号密码添加到新的url中)
 </code></pre>
-<ol start="2">
+<ol>
 <li>新clone</li>
 </ol>
 <pre><code>git clone https://username:password@github.com/your_repo_path.git
@@ -190,6 +189,23 @@ git add .
 git commit -m 'update .gitignore'
 </code></pre>
 </li>
+</ol>
+</li>
+<li>创建/拉取分支
+<ol>
+<li>查看分支<br>
+<code>git branch -a</code></li>
+<li>创建并切换分支<br>
+<code>git checkout -b dev #创建dev分支并切换至该分支</code><br>
+等同于<br>
+<code>git branch dev</code><br>
+<code>git checkout dev</code></li>
+<li>拉取分支到本地<br>
+<code>git fetch origin dev</code></li>
+<li>拉取分支内容到本地<br>
+<code>git pull orgin dev</code></li>
+<li>删除分支<br>
+<code>git branch -D dev</code></li>
 </ol>
 </li>
 </ul>
